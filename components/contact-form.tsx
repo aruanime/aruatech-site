@@ -69,7 +69,7 @@ export function ContactForm() {
           type="email"
           autoComplete="email"
           required
-          placeholder="you@studio.com"
+          placeholder="you@company.com"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           className={fieldClass}
@@ -83,7 +83,7 @@ export function ContactForm() {
           id="business"
           name="business"
           autoComplete="organization"
-          placeholder="Studio or company name"
+          placeholder="Business or company name"
           value={business}
           onChange={(event) => setBusiness(event.target.value)}
           className={fieldClass}

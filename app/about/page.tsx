@@ -31,9 +31,9 @@ export default function AboutPage() {
 
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-2">
         <article>
-          <h2 className="font-heading text-2xl text-navy sm:text-3xl">The studio</h2>
+          <h2 className="font-heading text-2xl text-navy sm:text-3xl">The business</h2>
           <p className="mt-4 leading-relaxed text-navy/75">
-            {SITE.legalName} is a marketing studio for brands that need their
+            {SITE.legalName} is a marketing business for brands that need their
             story, site, and operations to move in the same direction. We work
             through a monthly Growth Retainer: plan, build, publish, and review
             — without padding the work with invented metrics or hard-sell
@@ -60,7 +60,7 @@ export default function AboutPage() {
             end.
           </p>
           <p className="mt-4 leading-relaxed text-navy/75">
-            The studio takes a small number of retainers so each brand gets
+            The business takes a small number of retainers so each brand gets
             senior attention — including fashion and consumer brands that sell
             across borders, such as Vee Woman Design.
           </p>

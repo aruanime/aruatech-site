@@ -19,8 +19,8 @@ export default function ContactPage() {
           <div className="mx-auto mt-5 h-px w-20 bg-gold" aria-hidden="true" />
           <p className="mx-auto mt-6 max-w-xl text-lg text-navy/75">
             Tell us about the brand, the month ahead, and whether a Growth
-            Retainer is what you have in mind. {SITE.legalName} will reply from
-            the studio inbox.
+            Retainer is what you have in mind. We will reply from the ARUATECH
+            business inbox.
           </p>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function ContactPage() {
           <div>
             <h2 className="font-heading text-2xl text-navy">Email</h2>
             <p className="mt-2 text-navy/75">
-              Prefer to write directly? Use the studio address:
+              Prefer to write directly? Use the ARUATECH business inbox:
             </p>
             <a
               href={`mailto:${SITE.email}`}
@@ -55,7 +55,7 @@ export default function ContactPage() {
             </p>
           </div>
           <div>
-            <h2 className="font-heading text-2xl text-navy">Studio</h2>
+            <h2 className="font-heading text-2xl text-navy">Business</h2>
             <p className="mt-2 text-navy/75">
               {SITE.owner}
               <br />

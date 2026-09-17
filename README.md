@@ -1,10 +1,10 @@
 # ARUATECH SOLUTIONS INC — Marketing Site
 
-Public marketing website for **ARUATECH SOLUTIONS INC**, a studio led by Ufuoma Aruakpor in Windsor, ON.
+Public marketing website for **ARUATECH SOLUTIONS INC**, a business led by Ufuoma Aruakpor in Windsor, ON.
 
 Tagline: **PROBLEMS, OUR SOLUTIONS.**
 
-This is a static-friendly Next.js App Router site. There is no CMS, auth, or payment backend. The contact form opens a `mailto:` draft to the studio inbox.
+This is a static-friendly Next.js App Router site. There is no CMS, auth, or payment backend. The contact form opens a `mailto:` draft to the ARUATECH business inbox.
 
 ## Stack
 
