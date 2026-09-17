@@ -3,7 +3,6 @@
 import { useState, type FormEvent } from "react";
 
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -54,6 +53,7 @@ export function ContactForm() {
           name="name"
           autoComplete="name"
           required
+          placeholder="Your full name"
           value={name}
           onChange={(event) => setName(event.target.value)}
           className={fieldClass}
@@ -69,6 +69,7 @@ export function ContactForm() {
           type="email"
           autoComplete="email"
           required
+          placeholder="you@studio.com"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           className={fieldClass}
@@ -82,6 +83,7 @@ export function ContactForm() {
           id="business"
           name="business"
           autoComplete="organization"
+          placeholder="Studio or company name"
           value={business}
           onChange={(event) => setBusiness(event.target.value)}
           className={fieldClass}
@@ -96,17 +98,20 @@ export function ContactForm() {
           name="message"
           required
           rows={6}
+          placeholder="Tell us about the brand, the month ahead, and what you need help with."
           value={message}
           onChange={(event) => setMessage(event.target.value)}
           className="min-h-32 rounded-md border-sand bg-white px-3 py-2 text-navy placeholder:text-navy/40"
         />
       </div>
       <div className="flex items-start gap-3">
-        <Checkbox
+        <input
           id="retainer"
+          name="retainer"
+          type="checkbox"
           checked={interested}
-          onCheckedChange={(value) => setInterested(value === true)}
-          className="mt-0.5"
+          onChange={(event) => setInterested(event.target.checked)}
+          className="mt-1 size-4 shrink-0 accent-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:ring-offset-2"
         />
         <Label htmlFor="retainer" className="text-sm font-normal leading-5 text-navy/80">
           Interested in Growth Retainer
