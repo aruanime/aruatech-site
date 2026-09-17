@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MenuIcon, XIcon } from "lucide-react";
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Logo } from "@/components/logo";
 import { NAV } from "@/lib/site";
@@ -48,7 +48,6 @@ function NavLinks({
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const panelId = useId();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -112,20 +111,22 @@ export function SiteHeader() {
           <button
             ref={buttonRef}
             type="button"
-            className="inline-flex size-11 shrink-0 items-center justify-center rounded-md text-navy md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70"
+            className="relative z-50 inline-flex size-11 shrink-0 items-center justify-center rounded-md text-navy md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70"
             aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            aria-controls={panelId}
+            aria-expanded={open ? "true" : "false"}
+            aria-controls="mobile-navigation"
             onClick={() => setOpen((value) => !value)}
           >
-            {open ? <XIcon className="size-6" /> : <MenuIcon className="size-6" />}
+            {open ? <XIcon className="size-6" aria-hidden="true" /> : <MenuIcon className="size-6" aria-hidden="true" />}
           </button>
         </div>
         <div
           ref={panelRef}
-          id={panelId}
-          hidden={!open}
-          className="border-t border-sand bg-white md:hidden"
+          id="mobile-navigation"
+          className={cn(
+            "border-t border-sand bg-white md:hidden",
+            open ? "block" : "hidden"
+          )}
         >
           <nav aria-label="Mobile" className="mx-auto max-w-6xl">
             <NavLinks
