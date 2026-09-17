@@ -60,8 +60,10 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 bg-white/95 shadow-[0_1px_0_0_rgba(26,39,68,0.06)] backdrop-blur-sm">
       <div className="h-[7px] bg-navy" aria-hidden="true" />
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-5 sm:px-8">
-        <Logo />
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:gap-6 sm:px-8 sm:py-5">
+        <div className="min-w-0">
+          <Logo />
+        </div>
         <nav aria-label="Primary" className="hidden md:block">
           <NavLinks />
         </nav>
@@ -71,7 +73,7 @@ export function SiteHeader() {
               <Button
                 variant="ghost"
                 size="icon-lg"
-                className="md:hidden text-navy"
+                className="shrink-0 text-navy md:hidden"
                 aria-label="Open menu"
               />
             }
