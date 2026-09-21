@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Inquire with ${SITE.legalName}. Email ${SITE.email}. WhatsApp TBD.`,
+  description: `Inquire with ${SITE.legalName}. Email ${SITE.email}. ${SITE.whatsapp.display}.`,
 };
 
 export default function ContactPage() {
@@ -50,9 +50,16 @@ export default function ContactPage() {
           <div>
             <h2 className="font-heading text-2xl text-navy">WhatsApp</h2>
             <p className="mt-2 text-navy/75">
-              {SITE.whatsapp.label} number: {SITE.whatsapp.status}. A public
-              number will be listed here when it is ready.
+              Message {SITE.shortName} on WhatsApp:
             </p>
+            <a
+              href={SITE.whatsapp.href}
+              className="mt-3 inline-block text-navy underline decoration-gold underline-offset-4 hover:decoration-navy"
+              rel="noreferrer"
+              target="_blank"
+            >
+              {SITE.whatsapp.display}
+            </a>
           </div>
           <div>
             <h2 className="font-heading text-2xl text-navy">Business</h2>

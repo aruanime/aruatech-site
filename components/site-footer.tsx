@@ -54,7 +54,14 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              {SITE.whatsapp.label}: {SITE.whatsapp.status}
+              <a
+                href={SITE.whatsapp.href}
+                className="hover:text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70"
+                rel="noreferrer"
+                target="_blank"
+              >
+                {SITE.whatsapp.display}
+              </a>
             </li>
           </ul>
         </div>

@@ -62,7 +62,7 @@ export default function AboutPage() {
           <p className="mt-4 leading-relaxed text-navy/75">
             The business takes a small number of retainers so each brand gets
             senior attention — including fashion and consumer brands that sell
-            across borders, such as Vee Woman Design.
+            across borders, such as Ve Woman Design.
           </p>
         </article>
       </section>

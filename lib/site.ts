@@ -7,7 +7,8 @@ export const SITE = {
   email: "aruatechsolutions@gmail.com",
   whatsapp: {
     label: "WhatsApp",
-    status: "TBD",
+    display: "+1 226-935-8330 or WhatsApp",
+    href: "https://wa.me/12269358330",
   },
   description:
     "Strategic marketing solutions tailored for modern brands. Brand, web, content, and operations — in a monthly Growth Retainer.",
@@ -64,7 +65,7 @@ export const RETAINER = {
 } as const;
 
 export const CASE_STUDY = {
-  name: "Vee Woman Design",
+  name: "Ve Woman Design",
   brand: "VE WOMAN",
   instagramHandle: "@ve_woman",
   instagramUrl: "https://www.instagram.com/ve_woman/",
@@ -84,7 +85,7 @@ export const CASE_STUDY = {
   ],
   portrait: {
     src: "/images/vee-woman-portrait.jpg",
-    alt: "Designer portrait for VE WOMAN (Vee Woman Design), wearing a red coat and holding a green handbag.",
+    alt: "Designer portrait for VE WOMAN (Ve Woman Design), wearing a red coat and holding a green handbag.",
   },
   gallery: [
     {
