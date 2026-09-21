@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { CaseStudyPortrait } from "@/components/case-study-portrait";
 import {
   BuildIcon,
-  CaseStudyArt,
   PlanIcon,
   PublishIcon,
   ReviewIcon,
@@ -67,7 +67,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white pb-20" aria-labelledby="case-study">
+      <section className="bg-white pb-20" aria-labelledby="featured-client">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <Link
             href="/work"
@@ -75,14 +75,17 @@ export default function HomePage() {
           >
             <div>
               <h2
-                id="case-study"
+                id="featured-client"
                 className="font-heading text-2xl font-medium text-navy sm:text-[1.75rem]"
               >
-                Case Study: {CASE_STUDY.name}
+                Featured client: {CASE_STUDY.name}
               </h2>
               <p className="mt-3 max-w-xl text-navy/70">{CASE_STUDY.teaser}</p>
             </div>
-            <CaseStudyArt className="h-24 w-40 shrink-0 sm:h-28 sm:w-48" />
+            <CaseStudyPortrait
+              className="aspect-[3/4] w-28 shrink-0 sm:w-36"
+              sizes="9rem"
+            />
           </Link>
         </div>
       </section>
