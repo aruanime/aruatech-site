@@ -65,19 +65,3 @@ export function ReviewIcon() {
     </GoldIcon>
   );
 }
-
-export function CaseStudyArt({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 180 110"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-hidden="true"
-    >
-      <rect x="1.5" y="1.5" width="87" height="107" stroke="#C5A572" strokeWidth="1.5" />
-      <rect x="91.5" y="1.5" width="87" height="107" stroke="#C5A572" strokeWidth="1.5" />
-      <path d="M91.5 108.5L178.5 1.5" stroke="#C5A572" strokeWidth="1.5" />
-    </svg>
-  );
-}

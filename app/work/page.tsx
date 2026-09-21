@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { CaseStudyPortrait } from "@/components/case-study-portrait";
-import { CaseStudyArt } from "@/components/how-it-works-icons";
 import { CASE_STUDY, SITE } from "@/lib/site";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -11,13 +11,6 @@ export const metadata: Metadata = {
   title: "Work",
   description: `Featured client: ${CASE_STUDY.name} (${CASE_STUDY.brand}) — fashion brand work by ${SITE.legalName}.`,
 };
-
-const gallery = [
-  { label: "Lookbook direction" },
-  { label: "Campaign stills" },
-  { label: "Instagram drafts" },
-  { label: "Website surfaces" },
-];
 
 export default function WorkPage() {
   return (
@@ -83,17 +76,26 @@ export default function WorkPage() {
             Gallery
           </h2>
           <p className="mt-3 max-w-2xl text-navy/70">
-            Visual frames for the engagement. Finished photography lives with
-            the studio; these placeholders mark the surfaces we directed.
+            Visual work from the VE WOMAN engagement — lookbook, campaign,
+            Instagram, and website surfaces directed for the collection.
           </p>
           <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {gallery.map((item) => (
-              <li
-                key={item.label}
-                className="flex aspect-[4/5] flex-col justify-between rounded-xl border border-gold/70 bg-white p-5"
-              >
-                <CaseStudyArt className="mx-auto mt-6 h-20 w-32 opacity-80" />
-                <p className="text-sm font-medium text-navy">{item.label}</p>
+            {CASE_STUDY.gallery.map((item) => (
+              <li key={item.src}>
+                <figure className="overflow-hidden rounded-xl border border-gold/70 bg-white">
+                  <div className="relative aspect-[4/5] bg-navy/5">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(min-width: 1024px) 16rem, (min-width: 640px) 45vw, 90vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <figcaption className="border-t border-gold/40 px-4 py-3 text-sm font-medium text-navy">
+                    {item.label}
+                  </figcaption>
+                </figure>
               </li>
             ))}
           </ul>

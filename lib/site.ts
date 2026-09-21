@@ -86,4 +86,26 @@ export const CASE_STUDY = {
     src: "/images/vee-woman-portrait.jpg",
     alt: "Designer portrait for VE WOMAN (Vee Woman Design), wearing a red coat and holding a green handbag.",
   },
+  gallery: [
+    {
+      src: "/images/gallery/beyond-pearls-1.jpeg",
+      label: "Lookbook direction",
+      alt: "Lookbook still of a rust mermaid gown with pearl beadwork and a white feathered hem, VE WOMAN.",
+    },
+    {
+      src: "/images/gallery/blue-spell-1.jpeg",
+      label: "Campaign stills",
+      alt: "Campaign still of a cobalt and sky-blue draped mermaid gown with sequin embroidery, VE WOMAN.",
+    },
+    {
+      src: "/images/gallery/scarlet-dream-1.jpeg",
+      label: "Instagram drafts",
+      alt: "Instagram draft of a scarlet beaded mermaid gown with three-dimensional floral overlays, VE WOMAN.",
+    },
+    {
+      src: "/images/gallery/vintage-button-1.jpeg",
+      label: "Website surfaces",
+      alt: "Website still of an emerald satin mermaid gown with lace opera gloves, VE WOMAN.",
+    },
+  ],
 } as const;
