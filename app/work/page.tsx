@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { CaseStudyPortrait } from "@/components/case-study-portrait";
 import { CaseStudyArt } from "@/components/how-it-works-icons";
 import { CASE_STUDY, SITE } from "@/lib/site";
 import { buttonVariants } from "@/components/ui/button";
@@ -8,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: `Case study: ${CASE_STUDY.name} (${CASE_STUDY.brand}) — fashion brand work by ${SITE.legalName}.`,
+  description: `Featured client: ${CASE_STUDY.name} (${CASE_STUDY.brand}) — fashion brand work by ${SITE.legalName}.`,
 };
 
 const gallery = [
@@ -25,7 +26,7 @@ export default function WorkPage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold tracking-[0.2em] text-navy/55 uppercase">
-              Case study
+              Featured client
             </p>
             <h1 className="mt-3 font-heading text-4xl font-medium text-navy sm:text-5xl">
               {CASE_STUDY.name}
@@ -47,7 +48,10 @@ export default function WorkPage() {
               </a>
             </p>
           </div>
-          <CaseStudyArt className="h-32 w-56 shrink-0 lg:h-40 lg:w-72" />
+          <CaseStudyPortrait
+            className="mx-auto aspect-[3/4] w-full max-w-[16.5rem] shrink-0 lg:mx-0 lg:max-w-[18.5rem]"
+            priority
+          />
         </div>
       </section>
 

@@ -82,4 +82,8 @@ export const CASE_STUDY = {
     "A practical monthly rhythm for content, site care, and operations.",
     "A digital surface that reads as fashion-forward without losing the studio’s own identity.",
   ],
+  portrait: {
+    src: "/images/vee-woman-portrait.jpg",
+    alt: "Designer portrait for VE WOMAN (Vee Woman Design), wearing a red coat and holding a green handbag.",
+  },
 } as const;
