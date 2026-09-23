@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "Windsor Ontario",
   ],
   icons: {
-    icon: "/logo.svg",
+    icon: "/logo-mark.png",
   },
 };
 
