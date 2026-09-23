@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { SITE } from "@/lib/site";
@@ -5,26 +6,16 @@ import { cn } from "@/lib/utils";
 
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 72 72"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={cn("shrink-0", className)}
+    <Image
+      src="/logo-mark.png"
+      alt=""
+      width={277}
+      height={277}
+      unoptimized
+      loading="eager"
+      className={cn("block shrink-0 object-contain", className)}
       aria-hidden="true"
-    >
-      <path
-        d="M46 12.5C28.5 12.5 14.5 24.8 14.5 36C14.5 47.2 28.5 59.5 46 59.5"
-        stroke="#1A2744"
-        strokeWidth="9.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M26 12.5C43.5 12.5 57.5 24.8 57.5 36C57.5 47.2 43.5 59.5 26 59.5"
-        stroke="#C5A572"
-        strokeWidth="9.5"
-        strokeLinecap="round"
-      />
-    </svg>
+    />
   );
 }
 
